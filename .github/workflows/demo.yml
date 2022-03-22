@@ -23,7 +23,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout codes
         run: bash ./weather.sh
+      - name: 'Send mail'
+        uses: dawidd6/action-send-mail@master
+        with:
+          server_address: smtp.mailtrap.io
+          server_port: 2525
+          username: 7db988b1e7d13b
+          password: f67e33d0e39504
+          subject: Weather Report
+          body: file://result.html
+          to: wangbe0804@126.com
+          from: GitHub Actions
+          content_type: text/html
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
