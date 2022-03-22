@@ -32,7 +32,7 @@ jobs:
           password: f67e33d0e39504
           subject: Weather Report
           body: file://result.html
-          to: wangbe0804@126.com
+          to: wangben0804@126.com
           from: GitHub Actions
           content_type: text/html
 
