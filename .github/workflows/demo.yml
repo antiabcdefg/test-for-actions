@@ -6,7 +6,7 @@ name: Weather Rebot
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   schedule:
-    - cron: '10 * * * *'
+    - cron: '* * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,11 +17,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout codes
+      - name: 'Checkout codes'
         uses: actions/checkout@v1
-      
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout codes
+      - name: 'Get Weather'
         run: bash ./weather.sh
       - name: 'Send mail'
         uses: dawidd6/action-send-mail@master
