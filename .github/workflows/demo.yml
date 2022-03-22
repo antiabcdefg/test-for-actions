@@ -25,8 +25,7 @@ jobs:
           username: 7db988b1e7d13b
           password: f67e33d0e39504
           subject: Weather Report
-          body: file://result.html
+          html_body: file://result.html
           to: wangben0804@126.com
           from: GitHub Actions
-          content_type: text/html
 
